@@ -2,4 +2,8 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  -- Workaround to sudo not working in-editor
+  -- https://github.com/neovim/neovim/issues/1716
+  'lambdalisue/suda.vim',
+}
