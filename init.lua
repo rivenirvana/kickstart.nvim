@@ -275,7 +275,15 @@ require('lazy').setup({
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
-      require('which-key').setup()
+      require('which-key').setup {
+        -- Disable which-key popup when entering visual mode
+        -- https://github.com/nvim-lua/kickstart.nvim/issues/1034#issuecomment-2238882133
+        triggers = {
+          { '<auto>', mode = 'nisotc' },
+          { '<leader>', mode = { 'v' } },
+          { 'g', mode = { 'v' } },
+        },
+      }
 
       -- Document existing key chains
       require('which-key').add {
