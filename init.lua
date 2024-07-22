@@ -323,6 +323,14 @@ require('lazy').setup({
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>x', group = 'E[X]ec' },
       },
+
+      -- Disable which-key popup when entering visual mode
+      -- https://github.com/nvim-lua/kickstart.nvim/issues/1034#issuecomment-2238882133
+      triggers = {
+        { '<auto>', mode = 'nisotc' },
+        { '<leader>', mode = { 'v' } },
+        { 'g', mode = { 'v' } },
+      },
     },
   },
 
