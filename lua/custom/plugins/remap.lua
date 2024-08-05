@@ -5,6 +5,7 @@ vim.keymap.set('n', '<leader>xr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set('n', '<leader>xf', '<cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'E[X]ec [F]ind Project' })
 
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format, { desc = '[F]ormat buffer via LSP' })
+vim.keymap.set('i', '<C-c>', '<Esc>')
 
 -- Move visual selection/s to lines below or above them
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv")
@@ -34,7 +35,5 @@ vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]], { desc = 'Paste from system c
 vim.keymap.set({ 'n', 'x' }, '<leader>P', [["+P]], { desc = 'Paste from system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>v', [["_d]], { desc = 'Delete to void' })
 vim.keymap.set('x', '<leader>V', [["_dP]], { desc = 'Paste over selection' })
-
-vim.keymap.set('i', '<C-c>', '<Esc>')
 
 return {}
