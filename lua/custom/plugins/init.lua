@@ -3,8 +3,5 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  -- Workaround to sudo not working in-editor
-  -- https://github.com/neovim/neovim/issues/1716
-  'lambdalisue/suda.vim',
   'nvim-treesitter/playground',
 }
