@@ -3,9 +3,10 @@ vim.keymap.set('n', '<leader>xs', vim.cmd.so, { desc = 'E[X]ec [S]ource script' 
 vim.keymap.set('n', '<leader>xc', '<cmd>!chmod +x %<CR>', { desc = 'E[X]ec [C]hmod +x', silent = true })
 vim.keymap.set('n', '<leader>xr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'E[X]ec Search and [R]eplace' })
 vim.keymap.set('n', '<leader>xf', '<cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'E[X]ec [F]ind Project' })
-
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format, { desc = '[F]ormat buffer via LSP' })
-vim.keymap.set('i', '<C-c>', '<Esc>')
+
+-- Refrain from using <Esc> for CTRL-C, instead learn i_CTRL-C as a separate and intended feature. Keep keybind for now.
+-- vim.keymap.set('i', '<C-c>', '<Esc>')
 
 -- Move visual selection/s to lines below or above them
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv")
