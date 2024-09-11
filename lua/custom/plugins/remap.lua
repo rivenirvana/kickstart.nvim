@@ -7,6 +7,8 @@ vim.keymap.set('n', '<leader>F', vim.lsp.buf.format, { desc = '[F]ormat buffer v
 
 -- Refrain from using <Esc> for CTRL-C, instead learn i_CTRL-C as a separate and intended feature. Keep keybind for now.
 -- vim.keymap.set('i', '<C-c>', '<Esc>')
+-- https://github.com/nvim-lua/kickstart.nvim/issues/1121
+-- vim.keymap.set('i', '<C-c>', '<C-c>')
 
 -- Move visual selection/s to lines below or above them
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv")
