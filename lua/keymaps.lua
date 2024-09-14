@@ -38,5 +38,3 @@ vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]], { desc = 'Paste from system c
 vim.keymap.set({ 'n', 'x' }, '<leader>P', [["+P]], { desc = 'Paste from system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>v', [["_d]], { desc = 'Delete to void' })
 vim.keymap.set('x', '<leader>V', [["_dP]], { desc = 'Paste over selection' })
-
-return {}
