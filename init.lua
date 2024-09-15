@@ -97,6 +97,7 @@ vim.g.have_nerd_font = true
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+require 'options'
 
 -- Make line numbers default
 vim.opt.number = true
@@ -159,6 +160,7 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+require 'keymaps'
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -189,9 +191,6 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
-require 'options'
-require 'keymaps'
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -329,11 +328,12 @@ require('lazy').setup({
 
       -- Disable which-key popup when entering visual mode
       -- https://github.com/nvim-lua/kickstart.nvim/issues/1034#issuecomment-2238882133
-      -- triggers = {
-      --   { '<auto>', mode = 'nisotc' },
-      --   { '<leader>', mode = { 'v' } },
-      --   { 'g', mode = { 'v' } },
-      -- },
+      triggers = {
+        { '<auto>', mode = 'nixsotc' },
+        { '<leader>', mode = { 'v' } },
+        { 'g', mode = { 'v' } },
+        { 's', mode = { 'n', 'v' } },
+      },
     },
   },
 
