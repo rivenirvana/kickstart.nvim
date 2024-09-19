@@ -194,6 +194,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
+require 'autocommands'
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -858,13 +859,13 @@ require('lazy').setup({
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
-    -- opts = {
-    --   transparent = true,
-    --   styles = {
-    --     sidebars = 'transparent',
-    --     floats = 'transparent',
-    --   },
-    -- },
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = 'transparent',
+        floats = 'transparent',
+      },
+    },
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
