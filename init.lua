@@ -568,6 +568,7 @@ require('lazy').setup({
 
           -- Open code diagnostic in a float window.
           -- Alternatively, nvim 0.10 added <C-W>d as a default keybind for this function.
+          -- https://github.com/nvim-lua/kickstart.nvim/pull/1107
           map('<leader>cd', vim.diagnostic.open_float, '[C]ode [D]iagnostic')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
