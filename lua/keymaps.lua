@@ -38,3 +38,6 @@ vim.keymap.set({ 'n', 'x' }, '<leader>p', [["+p]], { desc = 'Paste from system c
 vim.keymap.set({ 'n', 'x' }, '<leader>P', [["+P]], { desc = 'Paste from system clipboard' })
 vim.keymap.set({ 'n', 'x' }, '<leader>v', [["_d]], { desc = 'Delete to void' })
 vim.keymap.set('x', '<leader>V', [["_dP]], { desc = 'Paste over selection' })
+
+vim.keymap.set('n', 'zt', ':let save_scrolloff = &scrolloff<CR>:set scrolloff=0<CR>zt:let &scrolloff = save_scrolloff<CR>')
+vim.keymap.set('n', 'zb', ':let save_scrolloff = &scrolloff<CR>:set scrolloff=0<CR>zb:let &scrolloff = save_scrolloff<CR>')
