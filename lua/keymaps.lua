@@ -14,12 +14,6 @@ vim.keymap.set('n', '<leader>F', vim.lsp.buf.format, { desc = '[F]ormat buffer v
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('x', 'K', ":m '<-2<CR>gv=gv")
 
--- Quickfix navigation
-vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
-vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz', { desc = 'Quickfix keymap: No description yet' })
-vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz', { desc = 'Quickfix keymap: No description yet' })
-
 -- Retain cursor postion for:
 -- - joining lines
 vim.keymap.set('n', 'J', 'mzJ`z')
