@@ -5,8 +5,8 @@ return {
   opts = {},
   dependencies = {
     {
-      'echasnovski/mini.icons',
-      -- "nvim-tree/nvim-web-devicons", -- alternative
+      'nvim-tree/nvim-web-devicons',
+      -- 'echasnovski/mini.icons',
       opts = {},
     },
   },
